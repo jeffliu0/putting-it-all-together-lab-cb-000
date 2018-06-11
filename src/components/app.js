@@ -11,15 +11,15 @@ export default class App extends Component{
 
   hitMe(user){
     if(user === 'user'){
-      this.props.store.dispatch(hitUser(this.props.getState().deck))
+      this.props.store.dispatch(hitUser(this.props.store.getState().deck))
     }
     else{
-      this.props.store.dispatch(hitAI(this.props.getState().deck))
+      this.props.store.dispatch(hitAI(this.props.store.getState().deck))
     }
   }
 
   calculateAIScore(winner){
-    
+    let score = this.props.store.
   }
   render(){
     return(
