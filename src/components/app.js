@@ -10,7 +10,9 @@ export default class App extends Component{
   }
 
   hitMe(user){
-
+    if(user === 'user'){
+      this.props.store.dispatch(hitUser(this.props.getState().deck))
+    }
   }
   render(){
     return(
