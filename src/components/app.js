@@ -21,7 +21,14 @@ export default class App extends Component{
   calculateAIScore(winner){
     let score = this.props.store.getState().aiCards.reduce((acc, currValue) =>
      { return acc += currValue },0 )
-  
+
+     if(score > 21){
+       return 'BUST'
+     }
+     else if(score == 21){
+       return 'BLACKJACK'
+     }
+
   }
   render(){
     return(
