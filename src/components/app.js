@@ -30,6 +30,20 @@ export default class App extends Component{
      }
 
   }
+
+  calculateUserScore(winner){
+   const userScore = this.props.store.getState().userCards.reduce((preVal, currVal) => {
+           return preVal += currVal.value
+         }, 0)
+   if (userScore > 21) {
+     return "BUST"
+   }else if (this.calculateAiScore() === "BUST") {
+     return "Winner!"
+   }else{
+     return userScore
+   }
+ }
+ 
   render(){
     return(
       <UserBlackjack store = {this.props.store} />
