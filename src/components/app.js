@@ -20,7 +20,7 @@ export default class App extends Component{
 
   calculateAIScore(winner){
     let score = this.props.store.getState().aiCards.reduce((acc, currValue) =>
-    acc += currValue),0
+    return acc += currValue),0
     )
   }
   render(){
