@@ -17,6 +17,10 @@ export default class App extends Component{
       this.props.store.dispatch(hitAI(this.props.getState().deck))
     }
   }
+
+  calculateAIScore(winner){
+    
+  }
   render(){
     return(
       <UserBlackjack store = {this.props.store} />
