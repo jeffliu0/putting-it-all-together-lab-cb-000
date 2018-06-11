@@ -13,6 +13,9 @@ export default class App extends Component{
     if(user === 'user'){
       this.props.store.dispatch(hitUser(this.props.getState().deck))
     }
+    else{
+      this.props.store.dispatch(hitAI(this.props.getState().deck))
+    }
   }
   render(){
     return(
