@@ -25,8 +25,8 @@ export default class App extends Component{
      if(score > 21){
        return 'BUST'
      }
-     else if(score == 21){
-       return 'BLACKJACK'
+     else{
+       return score
      }
 
   }
