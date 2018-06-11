@@ -8,7 +8,7 @@ export default class App extends Component{
   }
   render(){
     return(
-      <UserBlackjack />
+      <UserBlackjack store = {this.props.store} />
       <AIBlackjack />
     )
   }
